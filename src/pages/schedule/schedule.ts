@@ -13,6 +13,8 @@ import { UserData } from '../../providers/user-data';
 
 import { SessionDetailPage } from '../session-detail/session-detail';
 import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
+// import { AnimateItemSliding } from '../../directives/animate-item-sliding/animate-item-sliding';
+
 
 
 @Component({
@@ -25,6 +27,8 @@ export class SchedulePage {
   // with the variable #scheduleList, `read: List` tells it to return
   // the List and not a reference to the element
   @ViewChild('scheduleList', { read: List }) scheduleList: List;
+  
+  shouldAnimate: boolean = true;
 
   dayIndex = 0;
   queryText = '';

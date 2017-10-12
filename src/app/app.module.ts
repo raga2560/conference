@@ -11,6 +11,9 @@ import { IonicStorageModule } from '@ionic/storage';
 
 import { ConferenceApp } from './app.component';
 
+import { DirectivesModule } from '../directives/directives.module';
+// import { AnimateItemSliding } from '../directives/animate-item-sliding/animate-item-sliding';
+
 import { AboutPage } from '../pages/about/about';
 import { PopoverPage } from '../pages/about-popover/about-popover';
 import { AccountPage } from '../pages/account/account';
@@ -41,6 +44,7 @@ import { UserData } from '../providers/user-data';
     SchedulePage,
     ScheduleFilterPage,
     SessionDetailPage,
+	
     SignupPage,
     SpeakerDetailPage,
     SpeakerListPage,
@@ -51,6 +55,7 @@ import { UserData } from '../providers/user-data';
   imports: [
     BrowserModule,
     HttpModule,
+	DirectivesModule,
     IonicModule.forRoot(ConferenceApp, {}, {
       links: [
         { component: TabsPage, name: 'TabsPage', segment: 'tabs-page' },
